@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/e-commerce-react/static/css/main.3db70849.css",
+    "main.js": "/e-commerce-react/static/js/main.c36992a7.js",
+    "static/js/787.56eb8b5a.chunk.js": "/e-commerce-react/static/js/787.56eb8b5a.chunk.js",
+    "static/media/logo-ej.jpg": "/e-commerce-react/static/media/logo-ej.9c6da3ea0a15497af561.jpg",
+    "index.html": "/e-commerce-react/index.html",
+    "main.3db70849.css.map": "/e-commerce-react/static/css/main.3db70849.css.map",
+    "main.c36992a7.js.map": "/e-commerce-react/static/js/main.c36992a7.js.map",
+    "787.56eb8b5a.chunk.js.map": "/e-commerce-react/static/js/787.56eb8b5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3db70849.css",
+    "static/js/main.c36992a7.js"
+  ]
+}
