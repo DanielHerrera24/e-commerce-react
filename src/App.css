@@ -1,0 +1,9 @@
+.app {
+  font-size: calc(10px + 2vmin);
+  display: grid;
+  grid-template-rows: 10vh auto;
+}
+
+#seccion {
+  min-height: 90vh;
+}
