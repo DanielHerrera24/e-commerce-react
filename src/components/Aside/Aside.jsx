@@ -3,8 +3,8 @@ import "./aside.css";
 
 function Aside() {
   return (
-    <aside className="flex flex-col pl-10 w-1/4 border-r-2">
-      <article className="categorias flex flex-col items-start mt-10">
+    <aside className="hidden md:flex flex-col pl-10 w-1/4 border-r-2 border-[#ED1A23]">
+      <article className="categorias flex flex-col items-start md:mt-10">
         <h2 className=" text-3xl font-semibold pb-3">Categorias</h2>
         <ul className="text-xl flex flex-col items-start gap-1">
           <li>

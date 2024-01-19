@@ -3,12 +3,11 @@ import Cards from "../Layout/Cards/Cards";
 
 function ItemListContainer({ greeting }) {
   return (
-    <div className="pt-10 pl-6">
+    <div className="pt-5 md:pt-10 pl-6">
       <div className="cont-title pb-6">
-        <h1 className="text-5xl">{greeting}</h1>
+        <h1 className="text-3xl font-semibold">{greeting}</h1>
       </div>
       <div className="cont-cards flex flex-wrap gap-3">
-        <Cards />
         <Cards />
         <Cards />
       </div>

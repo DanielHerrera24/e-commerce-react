@@ -6,15 +6,12 @@ import Aside from "./components/Aside/Aside";
 function App() {
   return (
     <div className="app bg-gray-200 text-black">
-      <header>
-        <NavBar />
-      </header>
-      <main className="flex">
+      <div className="h-16">
+      <NavBar />
+      </div>
+      <main className="z-10 flex h-screen">
         <Aside />
-        <section
-          id="seccion"
-          className="flex flex-col items-center text-black"
-        >
+        <section id="seccion" className="flex flex-col text-black">
           <ItemListContainer greeting={"BIENVENIDO A ELÉCTRICA JANNY"} />
         </section>
       </main>
