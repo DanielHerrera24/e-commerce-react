@@ -28,7 +28,7 @@ function Contador({ inicio, stock, onAdd }) {
         </button>
       </div>
       <div className="addCarrito">
-        <button className="bg-[#034494] text-sm text-white py-2 px-3 rounded-full" onClick={() => onAdd(contador)} disabled={!stock}>
+        <button className="bg-[#034494] text-sm text-white md:p-1 py-2 px-3 rounded-full" onClick={() => onAdd(contador)} disabled={!stock}>
           Agregar al carrito
         </button>
       </div>

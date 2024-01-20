@@ -13,7 +13,7 @@ function NavBar() {
       <nav className="md:px-0 py-0 px-0 md:flex md:items-center md:justify-between bg-gray-200">
         <div className="flex text-2xl items-center gap-1">
           <img className="h-16 inline" src={logo} alt="Logo eléctrica janny" />
-          <span className="font-semibold">ELECTRICA JANNY</span>
+          <span className="ml-2 font-semibold">ELECTRICA JANNY</span>
         </div>
         <div
           onClick={() => setOpen(!open)}
