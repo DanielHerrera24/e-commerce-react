@@ -14,9 +14,9 @@ const card = (
       title="green iguana"
     />
     <CardContent>
-      <h2 className="text-3xl">Producto</h2>
-      <p className="text-lg">Descripcion del producto</p>
-      <button className="text-lg">Learn More</button>
+      <h2 className="text-3xl md:mb-1">Producto</h2>
+      <p className="text-lg mb-2 md:mb-1">Descripcion del producto</p>
+      <button className="text-lg bg-sky-600 text-white rounded-full mb-2 px-4 py2">Detalles</button>
       <Contador inicio={1} stock={10} onAdd={(cantidad) => console.log('cantidad agregada ', cantidad)} />
     </CardContent>
   </React.Fragment>
