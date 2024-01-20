@@ -26,8 +26,8 @@ function NavBar() {
           )}
         </div>
         <ul
-          className={`md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-7 bg-gray-200 gap-4 transition-all duration-500 ease-in ${
-            open ? "top-20" : "top-[-590px]"
+          className={`md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-7 bg-gray-200 shadow-md md:shadow-none gap-4 transition-all duration-500 ease-in ${
+            open ? "top-16" : "top-[-590px]"
           }`}
         >
           <li className="md:my-2 my-7 font-semibold">
@@ -54,7 +54,9 @@ function NavBar() {
               Contacto
             </a>
           </li>
-          <CartWidget />
+          <li>
+            <CartWidget />
+          </li>
         </ul>
       </nav>
     </header>

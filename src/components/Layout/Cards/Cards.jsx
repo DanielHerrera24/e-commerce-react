@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import CardMedia from "@mui/material/CardMedia";
+import Contador from "../../Contador/Contador";
 
 const card = (
   <React.Fragment>
@@ -16,6 +17,7 @@ const card = (
       <h2 className="text-3xl">Producto</h2>
       <p className="text-lg">Descripcion del producto</p>
       <button className="text-lg">Learn More</button>
+      <Contador inicio={1} stock={10} onAdd={(cantidad) => console.log('cantidad agregada ', cantidad)} />
     </CardContent>
   </React.Fragment>
 );

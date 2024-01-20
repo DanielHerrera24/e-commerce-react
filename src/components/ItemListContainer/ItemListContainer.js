@@ -9,7 +9,6 @@ function ItemListContainer({ greeting }) {
       </div>
       <div className="cont-cards flex flex-wrap gap-3">
         <Cards />
-        <Cards />
       </div>
     </div>
   );
