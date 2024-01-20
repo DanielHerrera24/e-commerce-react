@@ -10,20 +10,25 @@ function NavBar() {
 
   return (
     <header className="w-full fixed top-0 left-0 shadow-md">
-      <nav className="md:px-0 py-0 px-0 md:flex md:items-center md:justify-between bg-gray-200">
+      <nav className="md:px-0 py-0 px-0 flex md:flex md:items-center md:justify-between bg-gray-200">
         <div className="flex text-2xl items-center gap-1">
           <img className="h-16 inline" src={logo} alt="Logo eléctrica janny" />
-          <span className="ml-2 font-semibold">ELECTRICA JANNY</span>
+          <span className="ml-2 font-semibold hidden sm:block">
+            ELECTRICA JANNY
+          </span>
         </div>
-        <div
-          onClick={() => setOpen(!open)}
-          className="absolute right-2 top-4 cursor-pointer md:hidden text-3xl text-[#ED1A23]"
-        >
-          {open ? (
-            <ion-icon name="close"></ion-icon>
-          ) : (
-            <ion-icon name="menu"></ion-icon>
-          )}
+        <div className="ml-auto flex items-center mr-2 md:mr-0">
+          <CartWidget />
+          <div
+            onClick={() => setOpen(!open)}
+            className="cursor-pointer md:hidden text-3xl text-[#ED1A23]"
+          >
+            {open ? (
+              <ion-icon name="close"></ion-icon>
+            ) : (
+              <ion-icon name="menu"></ion-icon>
+            )}
+          </div>
         </div>
         <ul
           className={`md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-7 bg-gray-200 shadow-md md:shadow-none gap-4 transition-all duration-500 ease-in ${
@@ -53,9 +58,6 @@ function NavBar() {
             >
               Contacto
             </a>
-          </li>
-          <li>
-            <CartWidget />
           </li>
         </ul>
       </nav>

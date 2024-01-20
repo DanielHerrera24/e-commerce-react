@@ -7,7 +7,7 @@ function ItemListContainer({ greeting }) {
       <div className="flex justify-center text-center cont-title pb-6">
         <h1 className="text-3xl font-semibold">{greeting}</h1>
       </div>
-      <div className="cont-cards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 sm:gap-3">
+      <div className="cont-cards grid grid-cols-2 sm:grid-cols-3 sm:gap-3">
         <Cards />
         <Cards />
         <Cards />
