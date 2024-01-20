@@ -5,15 +5,17 @@ import Aside from "./components/Aside/Aside";
 
 function App() {
   return (
-    <div className="app bg-gray-200 text-black">
+    <div className="app text-black">
       <div className="h-16">
-      <NavBar />
+        <NavBar className="z-10" />
       </div>
-      <main className="z-10 flex h-screen">
-        <Aside />
-        <section id="seccion" className="flex flex-col text-black">
-          <ItemListContainer greeting={"BIENVENIDO A ELÉCTRICA JANNY"} />
-        </section>
+      <main className="flex justify-center h-screen">
+        <div className="flex child-main max-w-screen-lg">
+          <Aside />
+          <section id="seccion" className="flex flex-col text-black">
+            <ItemListContainer greeting={"BIENVENIDO A ELÉCTRICA JANNY"} />
+          </section>
+        </div>
       </main>
     </div>
   );
