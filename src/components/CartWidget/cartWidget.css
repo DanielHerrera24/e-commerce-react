@@ -4,6 +4,6 @@
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   &:hover {
     background-color: #dbdbdb;
-    color: #ED1A23;
+    color: #034494;
   }
 }

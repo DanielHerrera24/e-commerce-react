@@ -6,7 +6,7 @@ function Aside() {
   let [open, setOpen] = useState(false);
 
   return (
-    <aside className="md:flex flex-col md:pl-4 lg:pl-10 w-full md:w-1/4 border-r-2 md:border-[#ED1A23]">
+    <aside className="md:flex flex-col md:pl-4 lg:pl-10 w-full md:w-1/4 border-r-2 md:border-[#034494]">
       <div className="flex pt-5 pl-5 pb-3 md:pb-0 border-b-2 border-gray-300 md:border-none">
         <h2 className="hidden md:block font-semibold">Filtrar</h2>
         <div className="contFilter flex text-[#034494]" onClick={() => setOpen(!open)}>

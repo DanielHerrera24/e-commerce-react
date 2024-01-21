@@ -5,8 +5,8 @@ import "./cartWidget.css"
 
 function CartWidget() {
   return (
-    <a href='#' className='cart-w rounded-full w-14'>
-        <ShoppingCartIcon/>
+    <a href='#' className='cart-w rounded-full w-14 hover:text-[#034494]'>
+        <ShoppingCartIcon />
         <span className='text-lg'>2</span>
     </a>
   )

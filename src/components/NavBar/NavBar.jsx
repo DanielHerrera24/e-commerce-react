@@ -22,7 +22,7 @@ function NavBar() {
             <CartWidget />
             <div
               onClick={() => setOpen(!open)}
-              className="cursor-pointer md:hidden text-3xl text-[#ED1A23]"
+              className="cursor-pointer md:hidden text-3xl text-[#034494]"
             >
               {open ? (
                 <ion-icon name="close"></ion-icon>
@@ -39,7 +39,7 @@ function NavBar() {
             <li className="md:my-2 my-7 font-semibold">
               <a
                 href="#"
-                className="text-xl text-black no-underline border-b-2 border-solid border-[#ED1A23] hover:border-none hover:text-[#ED1A23] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
+                className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Inicio
               </a>
@@ -47,7 +47,7 @@ function NavBar() {
             <li className="md:my-0 my-7 font-semibold">
               <a
                 href="#"
-                className="text-xl text-black no-underline border-b-2 border-solid border-[#ED1A23] hover:border-none hover:text-[#ED1A23] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
+                className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Productos
               </a>
@@ -55,7 +55,7 @@ function NavBar() {
             <li className="md:my-0 my-7 font-semibold">
               <a
                 href="#"
-                className="text-xl text-black no-underline border-b-2 border-solid border-[#ED1A23] hover:border-none hover:text-[#ED1A23] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
+                className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Contacto
               </a>
