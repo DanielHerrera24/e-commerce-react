@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 
 function Contador({ inicio, stock, onAdd }) {
   const [contador, setContador] = useState(inicio);
@@ -20,11 +21,11 @@ function Contador({ inicio, stock, onAdd }) {
     <div className="flex flex-col justify-end items-center pt-3">
       <div className="cantidad flex justify-evenly text-2xl w-full pb-2">
         <button className="text-[#034494] w-6" onClick={restar}>
-          <ion-icon className="icon-add -z-10" name="remove-circle"></ion-icon>
+          <FaMinusCircle />
         </button>
         <h2>{contador}</h2>
         <button className="text-[#034494] w-6" onClick={sumar}>
-          <ion-icon className="icon-add" name="add-circle"></ion-icon>
+          <FaPlusCircle />
         </button>
       </div>
       <div className="addCarrito">
