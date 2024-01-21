@@ -10,7 +10,7 @@ function App() {
         <NavBar className="z-10" />
       </div>
       <main className="flex justify-center h-screen">
-        <div className="flex child-main w-full max-w-screen-lg">
+        <div className="flex flex-col md:flex-row child-main w-full max-w-screen-lg">
           <Aside />
           <section id="seccion" className="flex flex-col w-full text-black">
             <ItemListContainer greeting={"BIENVENIDO A ELÉCTRICA JANNY"} />
