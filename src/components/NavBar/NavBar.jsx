@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import "./navbar.css";
 import logo from "./logo-ej.jpg";
+import { IoMenu, IoClose } from "react-icons/io5";
 
 function NavBar() {
   let [open, setOpen] = useState(false);
@@ -25,9 +26,9 @@ function NavBar() {
               className="cursor-pointer md:hidden text-3xl text-[#034494]"
             >
               {open ? (
-                <ion-icon name="close"></ion-icon>
+                <IoClose />
               ) : (
-                <ion-icon name="menu"></ion-icon>
+                <IoMenu />
               )}
             </div>
           </div>
