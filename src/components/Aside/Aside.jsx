@@ -6,8 +6,8 @@ function Aside() {
   let [open, setOpen] = useState(false);
 
   return (
-    <aside className="md:flex flex-col md:pl-4 lg:pl-10 w-full md:w-1/4 border-r-2 md:border-[#034494]">
-      <div className="flex py-2 pl-5 md:pl-0 md:pb-0 border-b-2 border-gray-300 md:border-none">
+    <aside className="md:flex flex-col md:pl-4 lg:pl-10 w-full md:w-1/4 border-r-2">
+      <div className="flex py-2 pl-5 md:pl-0 md:py-0 border-b-2 border-gray-300 md:border-none">
         <h2 className="hidden md:block font-semibold">Filtrar</h2>
         <div className="contFilter flex items-center text-xl text-[#034494]" onClick={() => setOpen(!open)}>
           <FaFilter className="md:hidden" />
@@ -24,15 +24,23 @@ function Aside() {
           <ul className="accent-[#034494] text-sm flex flex-col items-start gap-1">
             <li>
               <input type="radio" name="categories" id="1" defaultChecked />
-              <label htmlFor="1">All Products</label>
+              <label htmlFor="1">Todo</label>
             </li>
             <li>
               <input type="radio" name="categories" id="2" />
-              <label htmlFor="2">Inteligente</label>
+              <label htmlFor="2">Apagadores</label>
             </li>
             <li>
               <input type="radio" name="categories" id="3" />
-              <label htmlFor="3">Lámparas</label>
+              <label htmlFor="3">Cajas</label>
+            </li>
+            <li>
+              <input type="radio" name="categories" id="4" />
+              <label htmlFor="4">Luces</label>
+            </li>
+            <li>
+              <input type="radio" name="categories" id="5" />
+              <label htmlFor="5">Tapas</label>
             </li>
           </ul>
         </article>
