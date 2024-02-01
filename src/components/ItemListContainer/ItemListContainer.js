@@ -11,11 +11,12 @@ function ItemListContainer({ greeting }) {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const asyncFunc = categoryId ? getProductsByCategory : getProducts
+      const asyncFunc = categoryId ? getProductsByCategory : getProducts;
       try {
         const res = await asyncFunc(categoryId);
         setProductos(res);
         setIsLoading(false);
+        console.log(res)
       } catch (err) {
         console.log(err.message);
         setIsLoading(false);

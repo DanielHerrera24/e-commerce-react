@@ -33,7 +33,7 @@ function App() {
                 }
               />
               <Route
-                path="/item/:itemId"
+                path="/e-commerce-react/id/:itemId"
                 element={<ProductDetailContainer />}
               />
               <Route
