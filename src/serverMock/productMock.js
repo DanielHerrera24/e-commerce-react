@@ -71,7 +71,7 @@ export const products = [
   },
   {
     id: 8,
-    productName: "Tapa decora doble",
+    productName: "Tapa decora sencillo",
     stock:"15",
     precio: 40,
     categoria: "tapas",
@@ -154,7 +154,6 @@ export const getProducts = () => {
 
 export const getProductById = (id) => {
   return new Promise((resolve) => {
-    console.log(id)
     setTimeout(() => {
       resolve(
         products.find((product) => product.id.toString() === id.toString())

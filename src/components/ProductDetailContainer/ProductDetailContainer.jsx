@@ -24,7 +24,11 @@ function ProductDetailContainer() {
   }, [itemId]);
 
   if (productDetail.loading)
-    return <Loading isLoading={productDetail.loading} color="#034494" />;
+    return (
+      <div className="flex justify-center items-center h-full w-full">
+        <Loading isLoading={productDetail.loading} color="#034494" />
+      </div>
+    );
 
   if (productDetail.error)
     return <h1>¡Ha ocurrido un error, intentelo nuevamente!</h1>;

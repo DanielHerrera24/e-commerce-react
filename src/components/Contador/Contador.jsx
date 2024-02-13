@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
+import Btn from "../commons/Btn";
 
 function Contador({ inicio, stock, onAdd }) {
   const [contador, setContador] = useState(inicio);
@@ -12,7 +13,7 @@ function Contador({ inicio, stock, onAdd }) {
   };
 
   const restar = () => {
-    if (contador > 1) {
+    if (contador >= 1) {
       setContador(contador - 1);
     }
   };
@@ -29,9 +30,9 @@ function Contador({ inicio, stock, onAdd }) {
         </button>
       </div>
       <div className="addCarrito">
-        <button className="bg-[#034494] text-sm text-white md:p-1 py-2 px-3 rounded-full" onClick={() => onAdd(contador)} disabled={!stock}>
+        <Btn onClick={() => onAdd(contador)} disabled={contador === 0}>
           Agregar al carrito
-        </button>
+        </Btn>
       </div>
     </div>
   );

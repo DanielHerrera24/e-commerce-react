@@ -4,6 +4,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Aside from "./components/Aside/Aside";
 import { Routes, Route } from "react-router-dom";
 import ProductDetailContainer from "./components/ProductDetailContainer/ProductDetailContainer";
+import Error from "./components/Error/Error";
 
 function App() {
   return (
@@ -11,10 +12,10 @@ function App() {
       <div className="h-16">
         <NavBar className="z-10" />
       </div>
-      <main className="flex justify-center h-screen">
+      <main className="flex justify-center h-[90vh]">
         <div className="flex flex-col md:flex-row child-main md:mt-7 w-full max-w-screen-lg">
           <Aside />
-          <section id="seccion" className="flex flex-col w-full text-black">
+          <section id="seccion" className="flex flex-col items-center w-full text-black">
             <Routes>
               <Route
                 path="/e-commerce-react"
@@ -38,7 +39,7 @@ function App() {
               />
               <Route
                 path="*"
-                element={<div> ERROR: 404, La página no existe</div>}
+                element={<Error/>}
               />
             </Routes>
           </section>
