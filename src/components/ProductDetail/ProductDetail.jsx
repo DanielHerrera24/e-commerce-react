@@ -2,9 +2,10 @@ import Contador from "../Contador/Contador";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Btn, { BtnOutline } from "../commons/Btn";
 import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
 
 function ProductDetail({
   productName,
@@ -15,10 +16,17 @@ function ProductDetail({
   id,
   precio,
 }) {
-  const [productAddedCart, setProductAddedCart] = useState(0);
+  const { addItems } = useContext(CartContext);
+  const [productQuantity, setProductQuantity] = useState(0);
 
-  const handleOnAdd = (cantidad) => {
-    setProductAddedCart(cantidad);
+  const onAdd = (quantity) => {
+    setProductQuantity(quantity);
+    const item = {
+      precio,
+      productName,
+      quantity,
+    };
+    addItems(item);
   };
 
   return (
@@ -32,7 +40,7 @@ function ProductDetail({
         <h3 className="text-xl">Descripción:</h3>
         <p className="text-lg text-gray-500">{descripcion}</p>
         <p className="text-xl">Categoría: {categoria}</p>
-        {productAddedCart > 0 ? (
+        {productQuantity > 0 ? (
           <div className="flex justify-evenly w-full pt-3">
             <Link to="/cart"><Btn>Terminar compra</Btn></Link>
             <Link to="/e-commerce-react"><BtnOutline>Seguir comprando</BtnOutline></Link>
@@ -42,7 +50,7 @@ function ProductDetail({
             categoria={categoria}
             inicio={0}
             stock={stock}
-            onAdd={handleOnAdd}
+            onAdd={onAdd}
           />
         )}
       </CardContent>

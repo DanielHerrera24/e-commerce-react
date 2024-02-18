@@ -1,10 +1,10 @@
 import NavBar from "./components/NavBar/NavBar";
 import "./App.css";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Aside from "./components/Aside/Aside";
 import { Routes, Route } from "react-router-dom";
-import ProductDetailContainer from "./components/ProductDetailContainer/ProductDetailContainer";
 import Error from "./components/Error/Error";
+import Collection from "./components/ProductListContainer/ProductListContainer.jsx";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 
 function App() {
   return (
@@ -15,32 +15,28 @@ function App() {
       <main className="flex justify-center h-[90vh]">
         <div className="flex flex-col md:flex-row child-main md:mt-7 w-full max-w-screen-lg">
           <Aside />
-          <section id="seccion" className="flex flex-col items-center w-full text-black">
+          <section
+            id="seccion"
+            className="flex flex-col items-center w-full text-black"
+          >
             <Routes>
               <Route
                 path="/e-commerce-react"
-                element={
-                  <ItemListContainer
-                    greeting={"BIENVENIDO A ELÉCTRICA JANNY"}
-                  />
-                }
+                element={<Collection greeting={"Productos desde FIREBASE"} />}
               />
               <Route
                 path="/e-commerce-react/categoria/:categoryId"
-                element={
-                  <ItemListContainer
-                    greeting={"BIENVENIDO A ELÉCTRICA JANNY"}
-                  />
-                }
+                element={<Collection greeting={"Productos desde FIREBASE"} />}
               />
               <Route
-                path="/e-commerce-react/id/:itemId"
-                element={<ProductDetailContainer />}
+                path="/e-commerce-react/id/:id"
+                element={<ItemDetailContainer />}
               />
               <Route
-                path="*"
-                element={<Error/>}
+                path="/e-commerce-react/cart"
+                element={{/* <Cart /> */}}
               />
+              <Route path="*" element={<Error />} />
             </Routes>
           </section>
         </div>
