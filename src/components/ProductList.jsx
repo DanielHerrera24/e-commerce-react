@@ -1,4 +1,4 @@
-import CardComp from "../Layout/Cards/Cards";
+import CardComp from "./Cards";
 import { Link } from 'react-router-dom';
 
 function ProductList({ productos }) {

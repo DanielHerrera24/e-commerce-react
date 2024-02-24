@@ -1,8 +1,5 @@
-/* eslint-disable no-template-curly-in-string */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import "./navbar.css";
 import logo from "./logo-ej.jpg";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
@@ -26,15 +23,15 @@ function NavBar() {
           </Link>
         </div>
         <div className="contCarUl flex md:flex-row-reverse">
-          <div className="ml-auto flex items-center mr-2">
+          <Link to="/e-commerce-react/cart" className="ml-auto flex items-center">
             <CartWidget />
+            </Link>
             <div
               onClick={() => setOpen(!open)}
-              className="cursor-pointer md:hidden text-3xl text-[#034494]"
+              className="cursor-pointer ml-auto flex items-center mr-2 md:hidden text-3xl text-[#034494]"
             >
               {open ? <IoClose /> : <IoMenu />}
             </div>
-          </div>
           <ul
             className={`md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-7 bg-gray-200 shadow-md md:shadow-none gap-4 transition-all duration-200 ease-in ${
               open ? "top-16" : "top-[-590px]"

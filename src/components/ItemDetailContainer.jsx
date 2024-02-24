@@ -1,13 +1,10 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
-import CartContext from "../../context/CartContext";
-import Loading from "../commons/Loading";
-import ProductDetail from "../ProductDetail/ProductDetail";
+import Loading from "./commons/Loading";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-  const { itemsCart } = useContext(CartContext);
-  console.log(itemsCart);
 
   const { id } = useParams();
   const [productDetail, setProductDetail] = useState({
@@ -41,7 +38,7 @@ function ItemDetailContainer() {
   return (
     <div>
       <h2>Detalle del producto</h2>
-      {productDetail && <ProductDetail { ...productDetail}/>}
+      {productDetail && <ItemDetail { ...productDetail}/>}
     </div>
   );
 }

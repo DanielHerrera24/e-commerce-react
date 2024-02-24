@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
-import Btn from "../commons/Btn";
+import Btn from "./commons/Btn";
 
 function Contador({ inicio, stock, onAdd }) {
   const [contador, setContador] = useState(inicio);

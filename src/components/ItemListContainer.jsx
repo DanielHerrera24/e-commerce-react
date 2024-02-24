@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
-import ProductList from "../ProductList/ProductList";
+import ProductList from "./ProductList";
 import { ScaleLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
 
-function ProductListContainer({ greeting }) {
+function ItemListContainer({ greeting }) {
   const [productos, setProductos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { categoryId } = useParams();
@@ -27,7 +27,7 @@ function ProductListContainer({ greeting }) {
   }, [categoryId, setIsLoading]);
 
   return (
-    <div className="pt-5 md:pt-0 md:pl-6">
+    <div className="pt-5 md:pt-0">
       <div className="flex justify-center text-center cont-title pb-6">
         <h1 className="text-3xl font-semibold">{greeting}</h1>
       </div>
@@ -36,7 +36,7 @@ function ProductListContainer({ greeting }) {
           <ScaleLoader color="#034494" />
         </div>
       ) : (
-        <div className="listItems cont-cards grid grid-cols-2 sm:grid-cols-3 sm:gap-2 gap-[2px]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 gap-[2px]">
           <ProductList productos={productos} />
         </div>
       )}
@@ -44,4 +44,4 @@ function ProductListContainer({ greeting }) {
   );
 }
 
-export default ProductListContainer;
+export default ItemListContainer;

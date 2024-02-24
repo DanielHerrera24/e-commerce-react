@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Loading from "../commons/Loading";
+import Loading from "./commons/Loading";
 import ProductDetail from "../ProductDetail/ProductDetail";
-import { getProductById } from "../../serverMock/productMock";
+import { getProductById } from "../serverMock/productMock";
 
 function ProductDetailContainer() {
   const { itemId } = useParams();

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./aside.css";
 import { FaFilter } from "react-icons/fa";
 
 function Aside() {
