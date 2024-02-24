@@ -7,6 +7,10 @@ import { Link, NavLink } from "react-router-dom";
 function NavBar() {
   let [open, setOpen] = useState(false);
 
+  const toggleNavbar = () => {
+    setOpen(!open); // Cambia el estado isOpen de true a false o viceversa
+  };
+
   return (
     <header className="w-full fixed top-0 left-0 shadow-md">
       <nav className="md:px-0 py-0 px-0 flex md:flex md:items-center justify-between md:justify-between bg-gray-200">
@@ -27,7 +31,7 @@ function NavBar() {
             <CartWidget />
             </Link>
             <div
-              onClick={() => setOpen(!open)}
+              onClick={toggleNavbar}
               className="cursor-pointer ml-auto flex items-center mr-2 md:hidden text-3xl text-[#034494]"
             >
               {open ? <IoClose /> : <IoMenu />}
@@ -40,6 +44,7 @@ function NavBar() {
             <li className="md:my-2 my-7 font-semibold">
               <NavLink
                 to="/e-commerce-react"
+                onClick={toggleNavbar}
                 className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Inicio
@@ -48,6 +53,7 @@ function NavBar() {
             <li className="md:my-0 my-7 font-semibold">
               <NavLink
                 to="/e-commerce-react/categoria/apagadores"
+                onClick={toggleNavbar}
                 className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Apagadores
@@ -56,6 +62,7 @@ function NavBar() {
             <li className="md:my-0 my-7 font-semibold">
               <NavLink
                 to="/e-commerce-react/categoria/cajas"
+                onClick={toggleNavbar}
                 className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Cajas
@@ -64,6 +71,7 @@ function NavBar() {
             <li className="md:my-2 my-7 font-semibold">
               <NavLink
                 to="/e-commerce-react/categoria/luces"
+                onClick={toggleNavbar}
                 className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Luces
@@ -72,6 +80,7 @@ function NavBar() {
             <li className="md:my-0 my-7 font-semibold">
               <NavLink
                 to="/e-commerce-react/categoria/tapas"
+                onClick={toggleNavbar}
                 className="text-xl text-black no-underline border-b-2 border-solid border-[#034494] hover:border-none hover:text-[#034494] hover:bg-neutral-300 transition duration-200 ease-in-out md:py-3 md:px-4 p-3"
               >
                 Tapas
