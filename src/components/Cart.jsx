@@ -14,15 +14,15 @@ function Cart() {
   return (
     <div className="flex flex-col items-center w-full">
       <h2 className="text-2xl font-semibold">Carrito de productos</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 gap-[2px]">
+      <div className="grid grid-cols-2 sm:grid-cols-3 sm:gap-2 gap-[2px] mb-16">
         {itemsCart.map((product) => (
           <article key={product.id}>
             <CardComp {...product}/>
           </article>
         ))}
       </div>
-      <footer className="flex fixed justify-center bottom-0 gap-16 md:w-auto w-screen bg-cyan-50">
-        <p>Total: {total}</p>
+      <footer className="flex fixed justify-evenly items-center bottom-0 md:w-auto w-screen md:gap-8 h-16 rounded-t-3xl px-4 bg-white shadow-[0_25px_50px_10px_rgba(0,0,0,0.3)]">
+        <p className="text-xl">Total: ${total}</p>
         <Btn type="submit">
           <p>Comprar ahora</p>
           <span>({itemsCart.length})</span>
