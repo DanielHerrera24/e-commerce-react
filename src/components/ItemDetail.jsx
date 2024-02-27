@@ -33,7 +33,7 @@ function ItemDetail({
 
   return (
     <Card variant="outlined" key={id} className="w-full md:w-96 h-auto">
-      <CardMedia component="img" className="" src={img} title={productName} />
+      <CardMedia component="img" className="w-full" src={img} title={productName} />
       <CardContent className="flex flex-col gap-2">
         <span className="text-2xl font-semibold">{"$ " + precio + " MXN"}</span>
         <h2 className="text-pretty text-base md:text-xl font-semibold text-gray-500 md:mb-1">

@@ -20,12 +20,12 @@ function Contador({ inicio, stock, onAdd }) {
 
   return (
     <div className="flex flex-col justify-end items-center pt-3">
-      <div className="cantidad flex justify-evenly text-2xl w-full pb-2">
-        <button className="text-[#034494] w-6" onClick={restar}>
+      <div className="cantidad flex justify-center gap-12 text-2xl w-full pb-4">
+        <button className="text-[#034494] w-6 hover:text-[#1865c4]" onClick={restar}>
           <FaMinusCircle />
         </button>
         <h2>{contador}</h2>
-        <button className="text-[#034494] w-6" onClick={sumar}>
+        <button className="text-[#034494] w-6 hover:text-[#1865c4]" onClick={sumar}>
           <FaPlusCircle />
         </button>
       </div>

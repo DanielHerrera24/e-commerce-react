@@ -36,10 +36,9 @@ function ItemDetailContainer() {
     return <h1>¡Ha ocurrido un error, intentelo nuevamente!</h1>;
 
   return (
-    <div>
-      <h2>Detalle del producto</h2>
+    <>
       {productDetail && <ItemDetail { ...productDetail}/>}
-    </div>
+    </>
   );
 }
 

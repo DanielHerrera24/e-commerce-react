@@ -26,7 +26,7 @@ function Cart() {
                 <CardComp {...product} />
               </article>
             ))}
-            <div className="flex flex-col items-center col-span-2 sm:col-span-3 pt-4">
+            <div className="flex flex-col items-center col-span-2 sm:col-span-3 py-6">
               <Link to="/e-commerce-react">
                 <BtnOutline>Volver al catálogo</BtnOutline>
               </Link>

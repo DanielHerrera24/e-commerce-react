@@ -5,10 +5,10 @@ import CardMedia from "@mui/material/CardMedia";
 
 const CardComp = ({ productName, img, id, precio, quantity }) => {
   return (
-    <Card className="h-full" variant="outlined" key={id}>
+    <Card className="h-full hover:shadow-xl" variant="outlined" key={id}>
       <CardMedia
         component="img"
-        className=""
+        className="w-full"
         src={img}
         title={productName}
       />
