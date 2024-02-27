@@ -5,6 +5,7 @@ import Error from "./components/commons/Error";
 import ItemListContainer from "./components/ItemListContainer.jsx";
 import ItemDetailContainer from "./components/ItemDetailContainer.jsx";
 import Cart from "./components/Cart.jsx";
+import Form from "./components/Form.jsx";
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
               <Route
                 path="/e-commerce-react/cart"
                 element={<Cart />}
+              />
+              <Route
+                path="/e-commerce-react/form"
+                element={<Form />}
               />
               <Route path="*" element={<Error />} />
             </Routes>
