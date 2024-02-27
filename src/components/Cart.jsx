@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Btn from "./commons/Btn";
+import Btn, { BtnOutline } from "./commons/Btn";
 import CartContext from "../context/CartContext";
 import CardComp from "./Cards";
 import { Link } from "react-router-dom";
@@ -26,6 +26,11 @@ function Cart() {
                 <CardComp {...product} />
               </article>
             ))}
+            <div className="flex flex-col items-center col-span-2 sm:col-span-3 pt-4">
+              <Link to="/e-commerce-react">
+                <BtnOutline>Volver al catálogo</BtnOutline>
+              </Link>
+            </div>
           </>
         ) : (
           <div className="flex flex-col items-center col-span-2 sm:col-span-3 gap-6">
