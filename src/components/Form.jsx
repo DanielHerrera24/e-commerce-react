@@ -10,24 +10,35 @@ function Form() {
   const [orderId, setOrderId] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [tel, setTel] = useState(null);
+  const [confirmEmail, setConfirmEmail] = useState("");
 
   const db = getFirestore();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const ordersCollection = collection(db, "orden");
-    const order = {
-      buyer: {
-        name,
-        email,
-      },
+    if (email !== confirmEmail) {
+      alert("Los correos electrónicos no coinciden");
+    } else {
+      const ordersCollection = collection(db, "orden");
+      const order = {
+        buyer: {
+          name,
+          email,
+          confirmEmail,
+          tel,
+        },
 
-      items: itemsCart,
-    };
+        items: itemsCart,
+      };
 
-    addDoc(ordersCollection, order).then(({ id }) => {
-      setOrderId(id);
-    });
+      addDoc(ordersCollection, order).then(({ id }) => {
+        setOrderId(id);
+        setName("");
+        setEmail("");
+        setTel("");
+      });
+    }
   };
 
   return (
@@ -49,9 +60,30 @@ function Form() {
           className="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-blue-500"
           placeholder="Email"
         />
+        <input
+          type="email"
+          onChange={(e) => setConfirmEmail(e.target.value)}
+          className="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-blue-500"
+          placeholder="Confirma tu Email"
+        />
+        <input
+          type="tel"
+          value={tel}
+          onChange={(e) => {
+            const input = e.target.value;
+            if (!isNaN(input) && input.length <= 10) {
+              setTel(input);
+            }
+          }}
+          className="w-full border border-gray-300 rounded-md px-4 py-2 mb-4 focus:outline-none focus:border-blue-500"
+          placeholder="Teléfono"
+        />
+
         <div className="flex w-full justify-evenly">
           <Btn type="submit">Enviar compra</Btn>
-          <Link to="/e-commerce-react/cart"><BtnOutline>Cancelar</BtnOutline></Link>
+          <Link to="/e-commerce-react/cart">
+            <BtnOutline>Cancelar</BtnOutline>
+          </Link>
         </div>
       </form>
       <h3 className="mt-4 text-xl">Order Id: {orderId}</h3>
