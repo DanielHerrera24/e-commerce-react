@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CartWidget from "../CartWidget/CartWidget";
+import CartWidget from "../CartWidget";
 import logo from "./logo-ej.jpg";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
@@ -14,8 +14,11 @@ function NavBar() {
   return (
     <header className="w-full fixed top-0 left-0 shadow-md">
       <nav className="md:px-0 py-0 px-0 flex md:flex md:items-center justify-between md:justify-between bg-gray-200">
-        <div >
-          <Link to="/e-commerce-react" className="flex text-2xl items-center gap-1">
+        <div>
+          <Link
+            to="/e-commerce-react"
+            className="flex text-2xl items-center gap-1"
+          >
             <img
               className="h-16 inline"
               src={logo}
@@ -27,15 +30,18 @@ function NavBar() {
           </Link>
         </div>
         <div className="contCarUl flex md:flex-row-reverse">
-          <Link to="/e-commerce-react/cart" className="ml-auto flex items-center">
+          <Link
+            to="/e-commerce-react/cart"
+            className="ml-auto flex items-center"
+          >
             <CartWidget />
-            </Link>
-            <div
-              onClick={toggleNavbar}
-              className="cursor-pointer ml-auto flex items-center mr-2 md:hidden text-3xl text-[#034494]"
-            >
-              {open ? <IoClose /> : <IoMenu />}
-            </div>
+          </Link>
+          <div
+            onClick={toggleNavbar}
+            className="cursor-pointer ml-auto flex items-center mr-2 md:hidden text-3xl text-[#034494]"
+          >
+            {open ? <IoClose /> : <IoMenu />}
+          </div>
           <ul
             className={`md:flex md:items-center md:pb-0 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-7 bg-gray-200 shadow-md md:shadow-none gap-4 transition-all duration-200 ease-in ${
               open ? "top-16" : "top-[-590px]"

@@ -1,9 +1,0 @@
-.cart-w {
-  display: flex;
-  padding: 1.4vh 1vh;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  &:hover {
-    background-color: #dbdbdb;
-    color: #034494;
-  }
-}
