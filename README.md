@@ -7,7 +7,7 @@
 [Eléctrica Janny E-commerce](https://danielherrera24.github.io/e-commerce-react/)
 ![alt text](image.png)
 
-## Dependencias:
+## Dependencias
 
 * React + Create React App
 * Firebase
@@ -15,7 +15,7 @@
 * SweetAlert2
 * MUI
 
-## Contenido:
+## Contenido
 
 Dentro de este E-commerce puedes encontrar algunos productos, los cuales puedes buscarlos por categorías desde la barra de navegación, así como el botón que dirije al carrito.
 
@@ -25,4 +25,4 @@ Para simular la compra, al dar click en "Comprar ahora" llevará a un formulario
 
 ---
 
-### Encuéntrame en [LinkedIn](https://www.linkedin.com/in/daniel-herrera-02314b279/) como Daniel Herrera.
+### Encuéntrame en [LinkedIn](https://www.linkedin.com/in/daniel-herrera-02314b279/) como Daniel Herrera
